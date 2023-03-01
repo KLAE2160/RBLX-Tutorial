@@ -1,7 +1,7 @@
 -- First Method
-repeat wait() until game.IsLoaded()
+repeat wait() until game:IsLoaded()
 
 -- Second Method
-if not game.IsLoaded() then
+if not game:IsLoaded() then
   game.Loaded:Wait()
 end
