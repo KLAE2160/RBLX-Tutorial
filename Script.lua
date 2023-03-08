@@ -712,8 +712,13 @@ window_misc.toggle("notify entities",false,function(val)
                 
                 if v:IsDescendantOf(workspace) then
                     message(v.Name:gsub("Moving",""):lower().." is coming go hide")
-		    local Message = v.Name:gsub("Moving",""):lower().." is coming go hide!"
-		    game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage(Message)
+		    local Message = v.Name:gsub("Moving",""):lower().." is coming go hide! [API] Sometimes may bug so hear voice is better"
+		    game:GetService("StarterGui"):SetCore("ChatMakeSystemMessage", {
+			Text = Message
+			Color = Color3.fromRGB(255, 255, 255)
+			Font = Enum.Font.FredokaOne
+			FontSize = Enum.FontSize.Size32
+		    })
                 end
             end
         end) 
